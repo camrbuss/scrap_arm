@@ -1,0 +1,88 @@
+<robot name="scrap_arm">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="7.0765" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://scrap_arm/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scrap_arm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Link00">
+    <inertial>
+      <origin xyz="0 0.075 -0.005" rpy="0 0 0" />
+      <mass value="0.041843" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://scrap_arm/meshes/Link00.STL" />
+      </geometry>
+      <material
+        name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://scrap_arm/meshes/Link00.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint00" type="continuous">
+    <origin xyz="0 -0.13 0" rpy="1.5708 0 3.1416" />
+    <parent link="base_link" />
+    <child link="Link00" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0" velocity="0" />
+  </joint>
+
+  <link
+    name="Link01">
+    <inertial>
+      <origin xyz="0 0.1 -0.005" rpy="0 0 0" />
+      <mass value="0.054343" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://scrap_arm/meshes/Link01.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://scrap_arm/meshes/Link01.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint01" type="continuous">
+    <origin xyz="0 0.15 -0.01" rpy="0 0 0" />
+    <parent link="Link00" />
+    <child link="Link01" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0" velocity="0" />
+  </joint>
+</robot>
