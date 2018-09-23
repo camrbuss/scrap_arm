@@ -1,12 +1,7 @@
 <robot name="scrap_arm">
   <link name="base_link">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <mass value="7.0765" />
-      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-    </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="-1.570796 0 0" />
       <geometry>
         <mesh filename="package://scrap_arm/meshes/base_link.STL" />
       </geometry>
@@ -15,7 +10,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="-1.570796 0 0" />
       <geometry>
         <mesh
           filename="package://scrap_arm/meshes/base_link.STL" />
@@ -25,11 +20,6 @@
 
   <link
     name="Link00">
-    <inertial>
-      <origin xyz="0 0.075 -0.005" rpy="0 0 0" />
-      <mass value="0.041843" />
-      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-    </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
@@ -48,7 +38,7 @@
     </collision>
   </link>
   <joint name="Joint00" type="continuous">
-    <origin xyz="0 -0.13 0" rpy="1.5708 0 3.1416" />
+    <origin xyz="0 0 0.13" rpy="0 3.14159625 0" />
     <parent link="base_link" />
     <child link="Link00" />
     <axis xyz="0 0 -1" />
@@ -57,11 +47,6 @@
 
   <link
     name="Link01">
-    <inertial>
-      <origin xyz="0 0.1 -0.005" rpy="0 0 0" />
-      <mass value="0.054343" />
-      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-    </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
