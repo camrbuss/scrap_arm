@@ -1,0 +1,69 @@
+<robot name="scrap_arm">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="-1.570796 0 0" />
+            <geometry>
+                <mesh filename="package://scrap_arm/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.77647 0.75686 0.73725 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="-1.570796 0 0" />
+            <geometry>
+                <mesh filename="package://scrap_arm/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Link00">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scrap_arm/meshes/Link00.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scrap_arm/meshes/Link00.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint00" type="continuous">
+        <origin xyz="0 0 0.13" rpy="0 3.14159625 0" />
+        <parent link="base_link" />
+        <child link="Link00" />
+        <axis xyz="0 0 -1" />
+        <limit effort="0" velocity="0" />
+    </joint>
+
+    <link name="Link01">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scrap_arm/meshes/Link01.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scrap_arm/meshes/Link01.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint01" type="continuous">
+        <origin xyz="0 0.15 -0.01" rpy="0 0 0" />
+        <parent link="Link00" />
+        <child link="Link01" />
+        <axis xyz="0 0 -1" />
+        <limit effort="0" velocity="0" />
+    </joint>
+</robot>
