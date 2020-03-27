@@ -1,0 +1,8 @@
+{
+    "python.formatting.provider": "yapf",
+    "files.associations": {
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
+    }
+}
