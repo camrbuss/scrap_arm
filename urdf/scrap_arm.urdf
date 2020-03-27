@@ -3,7 +3,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="-1.570796 0 0" />
             <geometry>
-                <mesh filename="package://scrap_arm/meshes/base_link.STL" />
+                <mesh filename="package://scrap_arm/urdf/base_link.STL" />
             </geometry>
             <material name="">
                 <color rgba="0.77647 0.75686 0.73725 1" />
@@ -12,7 +12,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="-1.570796 0 0" />
             <geometry>
-                <mesh filename="package://scrap_arm/meshes/base_link.STL" />
+                <mesh filename="package://scrap_arm/urdf/base_link.STL" />
             </geometry>
         </collision>
     </link>
@@ -21,7 +21,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://scrap_arm/meshes/Link00.STL" />
+                <mesh filename="package://scrap_arm/urdf/Link00.STL" />
             </geometry>
             <material name="">
                 <color rgba="0.79216 0.81961 0.93333 1" />
@@ -30,7 +30,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://scrap_arm/meshes/Link00.STL" />
+                <mesh filename="package://scrap_arm/urdf/Link00.STL" />
             </geometry>
         </collision>
     </link>
@@ -46,7 +46,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://scrap_arm/meshes/Link01.STL" />
+                <mesh filename="package://scrap_arm/urdf/Link01.STL" />
             </geometry>
             <material name="">
                 <color rgba="0.79216 0.81961 0.93333 1" />
@@ -55,7 +55,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://scrap_arm/meshes/Link01.STL" />
+                <mesh filename="package://scrap_arm/urdf/Link01.STL" />
             </geometry>
         </collision>
     </link>
